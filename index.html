@@ -359,11 +359,11 @@
       <!-- TODO: Replace with your teaser video -->
       <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
         <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
+        <source src="static/videos/IROS.mp4" type="video/mp4">
       </video>
       <!-- TODO: Replace with your video description -->
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Paper teaser video: Acc-CBF-QP, an open-source, runtime safety filter that uses Control Barrier Functions and Quadratic Programming to prevent legged and manipulating robots from violating physical constraints when running Reinforcement Learning policies.
       </h2>
     </div>
   </div>
@@ -395,31 +395,30 @@
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
+        <img src="static/images/rlqpController.png" alt="First research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          First image description.
+          Controller pipeline. The RL policy (purple) is filtered in real time by an Acc-CBF-QP (green) that enforces safety constraints using external disturbance estimates from observers (yellow). The resulting feasible commands are applied in torque control (red) or with a position reference for a Proportional-Derivative (PD) controller (blue) to the robot (gray).
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
+        <img src="static/images/comparison_joint_limit.png" alt="Second research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-          Second image description.
+          Kinova Gen3 joint limit violation comparison. Joint 4 position during OoD execution. RL alone (gray) exceeds the hardware joint limit, triggering a shutdown. Both RL+QP tasks (cyan and orange) strictly respect the joint limit constraints.
         </h2>
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
+        <img src="static/images/kinova_behavior_preservation.png" alt="Third research result visualization" loading="lazy"/>
         <h2 class="subtitle has-text-centered">
-         Third image description.
+         Kinova Gen3 behavior preservation under nominal conditions. Boxplots of Cartesian deviation relative to the mean RL trajectory, for RL (gray), FDTask (cyan), and TorqueTask (orange) during dynamic (Dyn) and quasi-static (QS) phases. Boxes show the median and interquartile range; whiskers extend to 1.5 times IQR.
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
+      <img src="static/images/performance_interference_analysis.png" alt="Fourth research result visualization" loading="lazy"/>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
+        Unitree H1 performance impact of the Acc-CBF-QP across 200 paired simulation trials per controller. \textbf{Top:} survival duration (time to termination). \textbf{Bottom:} termination causes. Left: aggressive velocity command on flat terrain. Right: uneven terrain robustness. Boxplots show median and interquartile range (whiskers: $1.5\times$IQR). Stacked bars report termination categories (fall, joint/velocity limits, collision, timeout); hatched segments indicate QP infeasibility rates for damping (D) and rollback (RB) variants.
       </h2>
     </div>
   </div>
@@ -432,57 +431,57 @@
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
-    <div class="container">
+    <div class="container"> -->
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <!-- <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
-          <div class="publication-video">
+          <div class="publication-video"> -->
             <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
       <h2 class="title is-3">Another Carousel</h2>
       <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
+        <div class="item item-video1"> -->
           <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
+          <!-- <video poster="" id="video1" controls muted loop height="100%" preload="metadata"> -->
             <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
+            <!-- <source src="static/videos/carousel1.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-video2">
+        <div class="item item-video2"> -->
           <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
+          <!-- <video poster="" id="video2" controls muted loop height="100%" preload="metadata"> -->
             <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
+            <!-- <source src="static/videos/carousel2.mp4" type="video/mp4">
           </video>
         </div>
-        <div class="item item-video3">
+        <div class="item item-video3"> -->
           <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
+          <!-- <video poster="" id="video3" controls muted loop height="100%" preload="metadata"> -->
             <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
+            <!-- <source src="static/videos/carousel3.mp4" type="video/mp4">
           </video>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End video carousel -->
 
 
@@ -491,23 +490,24 @@
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Poster</h2>
+      <h2 class="title">Poster</h2> -->
 
       <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
+      <!-- <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
           </iframe>
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
 
 <!--BibTex citation -->
+<!-- TODO: Replace with the final paper BibTeX entry -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
@@ -517,12 +517,17 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
+      <pre id="bibtex-code"><code>@unpublished{muraccioli:hal-05362571,
+  TITLE = {{Safe Execution of RL Policies via Acceleration-based CBF-QP Constraint Enforcement for Real-World Robotic Deployments}},
+  AUTHOR = {Muraccioli, Bastien and Cariou, Alice and Leziart, Pierre-Alexandre and Celerier, Mathieu and Demont, Arnaud and Venture, Gentiane and Benallegue, Mehdi},
+  URL = {https://hal.science/hal-05362571},
+  NOTE = {working paper or preprint},
+  YEAR = {2026},
+  MONTH = Mar,
+  KEYWORDS = {Robot Safety ; Optimization and Optimal Control ; Model Learning for Control},
+  PDF = {https://hal.science/hal-05362571v2/file/RLQP2026-preprint.pdf},
+  HAL_ID = {hal-05362571},
+  HAL_VERSION = {v2},
 }</code></pre>
     </div>
 </section>
