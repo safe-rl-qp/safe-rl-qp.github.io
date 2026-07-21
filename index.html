@@ -38,8 +38,13 @@
 
   <!-- Academic/Research Specific -->
   <meta name="citation_title" content="Safe Execution of RL Policies via Acceleration-based CBF-QP Constraint Enforcement for Real-World Robotic Deployments">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
+  <meta name="citation_author" content="Muraccioli, Bastien">
+  <meta name="citation_author" content="Cariou, Alice">
+  <meta name="citation_author" content="Leziart, Pierre-Alexandre">
+  <meta name="citation_author" content="Celerier, Mathieu">
+  <meta name="citation_author" content="Demont, Arnaud">
+  <meta name="citation_author" content="Venture, Gentiane">
+  <meta name="citation_author" content="Benallegue, Mehdi">
   <meta name="citation_publication_date" content="2026">
   <meta name="citation_conference_title" content="IROS 2026">
   <meta name="citation_pdf_url" content="https://safe-rl-qp.github.io/static/pdfs/paper.pdf">
@@ -100,7 +105,7 @@
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
     "headline": "Safe Execution of RL Policies via Acceleration-based CBF-QP Constraint Enforcement for Real-World Robotic Deployments",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
+    "description": "Acc-CBF-QP is an open-source, acceleration-based QP with Control Barrier Function that constrains any Reinforcement Learning policy onto a safe set at runtime, without modifying training. Validated on a Kinova Gen3 manipulator and a Unitree H1 humanoid, it reduces real-hardware constraint violations by up to 92% (100% on the manipulator) while preserving nominal task performance.",
     "author": [
       {
         "@type": "Person",
@@ -189,11 +194,11 @@
     "about": [
       {
         "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
+        "name": "Safe Reinforcement Learning for Robotics"
       },
       {
         "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
+        "name": "Control Barrier Functions"
       }
     ]
   }
@@ -208,8 +213,7 @@
     "url": "https://unit.aist.go.jp/isri/isri-jrl/en/",
     "logo": "https://safe-rl-qp.github.io/static/images/favicon.ico",
     "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
+      "https://github.com/safe-rl-qp"
     ]
   }
   </script>
@@ -303,16 +307,15 @@
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <!-- <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2607.14488" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span> -->
+                    </span>
 
 
                   <span class="link-block">
@@ -343,14 +346,13 @@
                   </span>
                   <span>HAL</span>
 
-                <!-- TODO: Update with your arXiv paper ID -->
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2607.14488" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
                   </span>
-                  <span>arXiv</span> -->
+                  <span>arXiv</span>
                 </a>
               </span>
             </div>
@@ -361,13 +363,41 @@
   </div>
 </section>
 
+<!-- Highlights -->
+<section class="hero is-light">
+  <div class="hero-body" style="padding-top: 1.5rem; padding-bottom: 1.5rem;">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-four-fifths">
+          <div class="content">
+            <ul style="list-style: none; margin-left: 0;">
+              <li style="margin-bottom: 0.75rem;">
+                <span class="icon has-text-link"><i class="fas fa-shield-alt"></i></span>
+                From statistical guarantees (Safe-RL) to <strong>theoretical, model-based guarantees</strong> via Acc-CBF-QP.
+              </li>
+              <li style="margin-bottom: 0.75rem;">
+                <span class="icon has-text-link"><i class="fas fa-chart-line"></i></span>
+                Robust to out-of-distribution states: <strong>92%&ndash;100% reduction</strong> in constraint violations on real hardware (Unitree H1 humanoid and Kinova Gen3 manipulator).
+              </li>
+              <li style="margin-bottom: 0.75rem;">
+                <span class="icon has-text-link"><i class="fas fa-bolt"></i></span>
+                <strong>No performance degradation</strong> in nominal conditions &mdash; and in some cases, improved performance (e.g. longer survival time under aggressive velocity commands on H1).
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End highlights -->
 
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
+      <video poster="" id="tree" controls muted height="100%" preload="metadata">
         <!-- TODO: Add your video file path here -->
         <source src="static/videos/IROS.mp4" type="video/mp4">
       </video>
@@ -428,7 +458,7 @@
       <!-- Your image here -->
       <img src="static/images/performance_interference_analysis.png" alt="Fourth research result visualization" loading="lazy"/>
       <h2 class="subtitle has-text-centered">
-        Unitree H1 performance impact of the Acc-CBF-QP across 200 paired simulation trials per controller. \textbf{Top:} survival duration (time to termination). \textbf{Bottom:} termination causes. Left: aggressive velocity command on flat terrain. Right: uneven terrain robustness. Boxplots show median and interquartile range (whiskers: $1.5\times$IQR). Stacked bars report termination categories (fall, joint/velocity limits, collision, timeout); hatched segments indicate QP infeasibility rates for damping (D) and rollback (RB) variants.
+        Unitree H1 performance impact of the Acc-CBF-QP across 200 paired simulation trials per controller. Top: survival duration (time to termination). Bottom: termination causes. Left: aggressive velocity command on flat terrain. Right: uneven terrain robustness. Boxplots show median and interquartile range (whiskers: 1.5xIQR). Stacked bars report termination categories (fall, joint/velocity limits, collision, timeout); hatched segments indicate QP infeasibility rates for damping (D) and rollback (RB) variants.
       </h2>
     </div>
   </div>
